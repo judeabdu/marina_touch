@@ -1,0 +1,604 @@
+/* ==========================================================================
+   MARINA TOUCH LUXURY THEME (COMPLETELY RECTIFIED & ENHANCED)
+   ========================================================================== */
+
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* TYPOGRAPHY CONFIGURATION */
+h1, h2, h3, .nav-logo {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #f3e5ab; /* Soft Gold Accent */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.premium-glow-btn {
+    background: linear-gradient(135deg, #d4af37, #aa7c11);
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.premium-glow-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+/* 1. STICKY LUXURY NAVBAR */
+.main-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(11, 11, 11, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d4af37;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-item:hover {
+    color: #d4af37;
+}
+
+/* 2. PARALLAX HERO SECTION (RECTIFIED WITH WORK IMAGE) */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('assets/images/makeup1.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 30%, rgba(11, 11, 11, 0.9) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.brand-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.gold-divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    margin: 20px auto;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #f3e5ab;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* 3. SERVICES MATRIX (WORDS ON TOP, PHOTO BELOW) */
+.services-section {
+    padding: 100px 8%;
+    background-color: #0b0b0b;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card-3d {
+    background: linear-gradient(145deg, #161616, #0f0f0f);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 15px;
+    padding: 40px 25px 25px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.card-inner h3 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card-inner p {
+    color: #cccccc;
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* Luxury Framework for inline Service Images */
+.card-image-wrap {
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Focuses the Henna card image directly onto her bridal artwork */
+.card-image-wrap.henna-focus img {
+    object-position: center 60%;
+    transform: scale(1.4);
+}
+
+/* Card Interactivity states */
+.card-3d:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.card-3d:hover .card-image-wrap img {
+    transform: scale(1.05);
+}
+
+/* Custom zoom adjust override for Henna hover state */
+.card-3d:hover .card-image-wrap.henna-focus img {
+    transform: scale(1.5);
+}
+
+/* 4. BEFORE/AFTER SLIDER SECTION */
+.transformation-section {
+    padding: 100px 8%;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.img-background, .img-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-background img, .img-foreground img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-foreground {
+    width: 50%;
+    overflow: hidden;
+}
+
+/* Labels */
+.label {
+    position: absolute;
+    bottom: 20px;
+    padding: 6px 15px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 10;
+}
+.before-label { right: 20px; border-right: 3px solid #f3e5ab; }
+.after-label { left: 20px; border-left: 3px solid #d4af37; }
+
+/* Drag Handling Elements */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #d4af37;
+    cursor: ew-resize;
+    z-index: 20;
+}
+.handle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #0b0b0b;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* 5. LIMITLESS PORTFOLIO GRID */
+.portfolio-section {
+    padding: 60px 8% 100px 8%;
+    background-color: #0b0b0b;
+}
+
+/* =======================================================
+   5b. GALLERY FILTER TABS UI (TRUE STICKY CONTEXT FIX)
+   ======================================================= */
+.gallery-filters {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto 50px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); 
+    
+    /* Reverted to accurate Context Sticky */
+    position: sticky;
+    top: 79px; /* Anchors right below the primary sticky menu bar */
+    background-color: #0b0b0b; /* Masks images floating beneath it cleanly */
+    z-index: 99; /* Stays beneath the main top navbar context */
+    padding-top: 20px;
+}
+
+.filter-btn {
+    background: none !important; 
+    border: none !important; 
+    outline: none !important;
+    box-shadow: none !important;
+    color: #888888; 
+    font-family: 'Cinzel', serif; 
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+    cursor: pointer;
+    position: relative;
+    padding: 12px 10px;
+    flex: 1; 
+    text-align: center;
+    transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dynamic line underline effect */
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f3e5ab, #d4af37);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.filter-btn:hover {
+    color: #ffffff; 
+}
+
+.filter-btn:hover::after {
+    width: 80%; 
+}
+
+/* Active style configuration state */
+.filter-btn.active {
+    color: #d4af37; 
+    font-weight: 600;
+}
+
+.filter-btn.active::after {
+    width: 100%; 
+    background: #d4af37;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.portfolio-img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.portfolio-img-wrap img,
+.portfolio-img-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Clean handling rules for responsive TikTok embedded windows */
+.tiktok-embed-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #000000;
+}
+
+.portfolio-item:hover .portfolio-img-wrap img,
+.portfolio-item:hover .portfolio-img-wrap video {
+    transform: scale(1.08);
+}
+
+/* Elegant Overlays */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none; /* Allows user clicks to bypass overlay directly onto video players */
+}
+
+/* Social Media specific layout patch for TikTok wrappers */
+.portfolio-overlay.social-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    height: 35%;
+    bottom: 0;
+    top: auto;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: #d4af37;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.portfolio-overlay p {
+    color: #dddddd;
+    font-size: 0.9rem;
+}
+
+/* 6. FIND US CONTACT PLAN (RECTIFIED WITH PHOTO BACKDROP) */
+.location-section {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-image: linear-gradient(rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0.95)), url('assets/images/makeup2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.location-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 80px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.location-info h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.address {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+    color: #ffffff;
+    margin-top: 30px;
+    align-self: flex-start;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    z-index: 2;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    z-index: 2;
+    border-left: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* FOOTER */
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color: #0b0b0b;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (MOBILE FIXES)
+   ========================================== */
+@media (max-width: 768px) {
+    .main-navbar {
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .brand-title {
+        font-size: 2.8rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .slider-container {
+        height: 350px;
+    }
+    
+    .gallery-filters {
+        position: static; /* Reverts layout mechanics on mobile views */
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 5px;
+        border-bottom: none;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        padding: 8px 0;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .filter-btn::after {
+        display: none;
+    }
+}

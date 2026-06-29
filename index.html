@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Touch | Luxury Bridal & Beauty Salon Masaka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- STICKY LUXURY NAVBAR -->
+    <header class="main-navbar">
+        <div class="nav-logo">Marina Touch</div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#transformations" class="nav-item">Experience</a>
+            <a href="#portfolio" class="nav-item">Gallery</a>
+            <a href="#contact" class="nav-item">Find Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay-dark"></div>
+        <div class="hero-content animate-fade-up">
+            <h1 class="brand-title">Marina Touch</h1>
+            <div class="gold-divider"></div>
+            <p class="tagline">Bridal Makeup • Hair Styling • Henna • Luxury Cosmetics</p>
+            <a href="#services" class="btn premium-glow-btn">Explore Elegance</a>
+        </div>
+    </section>
+
+    <!-- SERVICES MATRIX (TEXT ON TOP, PHOTO BELOW) -->
+    <section id="services" class="services-section">
+        <h2>Our Premium Services</h2>
+        <p class="section-subtitle">Tailored luxury treatments designed to unveil your royalty</p>
+        <div class="services-container">
+            <!-- Service 1: Bridal -->
+            <div class="card-3d">
+                <div class="card-inner">
+                    <h3>Bridal Glow</h3>
+                    <p>Exquisite bridal makeup, veiling, and custom hair styling tailored for your special day.</p>
+                </div>
+                <div class="card-image-wrap">
+                    <img src="assets/images/service1.jpg" alt="Bridal Glow Service">
+                </div>
+            </div>
+            <!-- Service 2: Henna -->
+            <div class="card-3d">
+                <div class="card-inner">
+                    <h3>Henna Artistry</h3>
+                    <p>Intricate, traditional, and modern Henna designs crafted by professional artists.</p>
+                </div>
+                <div class="card-image-wrap">
+                    <img src="assets/images/service2.jpg" alt="Henna Artistry Service">
+                </div>
+            </div>
+            <!-- Service 3: Cosmetics -->
+            <div class="card-3d">
+                <div class="card-inner">
+                    <h3>Cosmetics & Perfumes</h3>
+                    <p>Curated luxury perfumes and premium beauty products to maintain your radiance.</p>
+                </div>
+                <div class="card-image-wrap">
+                    <img src="assets/images/service3.jpg" alt="Cosmetics and Perfumes Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE/AFTER TRANSFORMATION SECTION -->
+    <section id="transformations" class="transformation-section">
+        <h2>The Transformation Experience</h2>
+        <p class="section-subtitle">Drag the slider left and right to see the Marina Touch magic</p>
+        
+        <div class="slider-container">
+            <div class="img-background">
+                <img src="assets/images/transformation-before.jpg" alt="Before Glamour">
+                <div class="label before-label">Natural Base</div>
+            </div>
+            <div class="img-foreground">
+                <img src="assets/images/transformation-after.jpg" alt="After Glamour">
+                <div class="label after-label">Marina Bridal Glow</div>
+            </div>
+            <div class="slider-handle">
+                <div class="handle-line"></div>
+                <div class="handle-button"><span>↔</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIMITLESS GALLERY -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>The Marina Touch Gallery</h2>
+        <p class="section-subtitle">Real transitions, flawless execution, and timeless elegance</p>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+            <button class="filter-btn" data-filter="makeup">Bridal Makeup</button>
+            <button class="filter-btn" data-filter="henna">Henna Art</button>
+            <button class="filter-btn" data-filter="hair">Hair Styling</button>
+        </div>
+        
+        <!-- The Javascript automatically populates both image cards and video cards inside here -->
+        <div class="portfolio-grid" id="dynamic-gallery"></div>
+    </section>
+
+    <!-- GEOLOCATION CONTACT SECTION -->
+    <section id="contact" class="location-section">
+        <div class="location-info">
+            <h2>Visit Our Studio</h2>
+            <p class="address">
+                <strong>Eria Mall, Elgin Rd</strong><br>
+                Masaka Town, Uganda
+            </p>
+            <p>Experience world-class bridal and beauty treatments.</p>
+            <a href="https://wa.me/256752974036" target="_blank" class="btn whatsapp-btn">Book Appointment via WhatsApp</a>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.762369651536!2d31.7324153!3d-0.3411787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d9da433f4a9b43%3A0x6b4fb6fb3a12a83f!2sElgin%20Rd%2C%20Masaka!5e0!3m2!1sen!2sug!4v1710000000000!5m2!1sen!2sug" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Marina Touch. All Rights Reserved. Crafted for Royalty.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
